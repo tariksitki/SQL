@@ -252,7 +252,7 @@ select name from tracks;
 -- ikincisi ise C style dedigimiz /*    */
 
 --  
------- DISTINCT
+-----DISTINCT
 
 -- UNIQUE cikti aliriz. Bir isimden ssadece bir kez return edilir
 
@@ -273,7 +273,7 @@ SELECT DISTINCT AlbumId, MediaTypeId from tracks;
 -- 348 sonuc
 
 
--------------------- WHERE
+----------------WHERE
 -- sartlarda kullanilan isaretler
 --  =
 -- >
