@@ -252,7 +252,7 @@ select name from tracks;
 -- ikincisi ise C style dedigimiz /*    */
 
 --  
------DISTINCT
+----------DISTINCT
 
 -- UNIQUE cikti aliriz. Bir isimden ssadece bir kez return edilir
 
