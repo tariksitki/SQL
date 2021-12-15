@@ -219,6 +219,7 @@ FROM invoice_items;
 
 
 
+
 SELECT avg(UnitPrice) as ortalama
 from invoice_items
 WHERE InvoiceId = 10;
