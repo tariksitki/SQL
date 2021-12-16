@@ -544,7 +544,7 @@ ON tracks.AlbumId = albums.AlbumId;
 -- departments.dept_id
 -- from employees
 -- left join departments
--- on employees.emp_id = departments.emp_id
+-- on employees.emp_id = departments.emp_id  -- eger burada bu satiri yazmazsak bir eleani birden cok kez gösteriyor
 -- where gender = "Male";
 
 
