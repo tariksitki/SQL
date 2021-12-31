@@ -72,7 +72,9 @@ JOIN siparisler as s
 ON m.marka_id = s.marka_id;
 
 
---
+
+
+
 
 
 
