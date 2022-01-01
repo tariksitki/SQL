@@ -407,4 +407,226 @@ WHERE tracks.AlbumId = albums.AlbumId AND
 
 --- DML tablodaki verilerle ugrasir
 
+-- DDL arabanin kaportasi, DML ise ic aksan
+
+
+--- Mesela bir kullaniciya yetki verme, kullanici ekleme
+-- privilage lar DCL e girer
+
+
+-- transaction komutlari:
+-- mesela iki tane tablo olusturuyoruz bunlardan bir tanesi
+-- calsimiyor. bu nedenle rollback komutu ile 
+-- tüm islemleri geri aliyoruz. Bu transaction a 
+-- bir örnektr
+
+
+
+-- DCL i daha cok database adminler kullanir. mesela
+-- ekipe yeni bir adam katildi buna yetki verecegiz
+
+
+
+
+
+
+
+-------------------- DDL
+
+-- DB shemasini belirler
+
+-- create, alter, drop gibi komutlar kullanilir
+
+-- DDL statements lar, daha cok bir database kurulurken
+-- yada configure edilirken yani veri yerlestirmeden
+-- önce kullanilir
+
+
+-- alter var olan bir tablonun verilerini degistirir
+-- tablo adini degistir, bir tabloyu tamamen sil gibi
+
+-- create ise sifirdan bir tablo olusturur
+
+-- mesela bir tablonun bir sütununun veri tipi text olmus
+-- biz bunu string yapmak istiyoruz. Burada alter table
+-- ile degistiriyoruz
+
+
+-- mesela bir tabloya yeni bir sütun eklemek istiyoruz
+-- bu durumda alter table add diyoruz
+
+
+-- drop ise tabloyu siler.
+-- tablo silmenin bir diger yolu ise;
+-- database structure da tablo ismine sag tiklayip
+-- delete table demektir
+
+
+-- Önemli: tablo ismine sag tikladigimizda, karsimiza bir de
+-- copy create statements secenekleri cikar. 
+-- buradaki komutlari kopyalayip baska bir tablo 
+-- olusturmak icin de kullanabilirz
+
+
+
+
+-- DML:
+
+-- Burada artik tablo icerisinde var olan veri ile 
+-- ilgileniyoruz. 
+
+-- Dml komutlarinda tablo ayni kalir
+
+-- Insert: tablo icerisine veri yerlestirir
+
+-- Update: var olan veriyi günceller
+
+-- Delete: tablo icerisinde bir veri siler
+-- Tablo ise drop ile silinir
+
+-- Select: secer
+
+-- Bazi kaynaklarda select ayri bir kategoride tutulur.
+-- cünkü select manipule yapmaz.
+
+-- select e Data Query language derler
+
+
+
+-- Data Control Language:
+
+--- Buradaki ifadeler:
+
+-- Revoke: yetkiyi geri almak
+
+-- Grant: yetki vermek
+
+
+
+
+
+
+------ Transaction Control Language:
+
+-- Buradaki bazi ifadeler:
+
+--- commit: birkac islemden sonra commit yapmakta fayda var
+-- rollback
+-- savepoint: calisma yaptigimiz belirli bir noktaya 
+-- kadar kaydet. eger silinirse geri getirebilelim
+
+
+
+
+--- sql de tablo olustururken her bir sütunun veri tipini
+-- secmek zorundayiz. 
+
+-- sql de bircok veri tipi vardir ancak 3 kategoride 
+-- siniflandirilir
+
+
+-- string
+-- Date and Time
+-- Numeric (int, float)
+
+
+-- string data types ise sunlardir:
+
+-- char
+-- varchar
+-- binary
+-- varbinary
+-- blob
+-- enum
+-- set
+
+
+
+
+-- varchar ile char arasinda ne fark vardir?
+
+-- kullanim su sekildedir:
+
+-- isim char(20)
+-- isim varchar(20)
+
+-- char kullandigimizda "ali" yazdigimizda bellekte
+-- yine 20 byte lik yer kaplar
+-- varchar da ise 3 byte lik yer kaplar
+--
+-- char da, parantez icerisinde yazdigimiz rakam 
+-- kadar allocate yapar yani yer ayirir
+
+-- ancak ikisi de string icin kullanilir
+
+-- varchar daki var  variable dan gelir
+
+
+-- varchar veri tipinde maximum  65535 karakter girilebilri
+
+-- char da bu aralik 255 e kadar dir. klasik ascii modeli
+
+-- SQLite da ise text adinda bir veri tipi vardir
+
+-- parantez kullanmamiza gerek yoktur sadece text yazmamiz yeterli
+
+
+
+-- Date and Time Data Types:
+
+-- Date:  2019-05-03
+
+-- Datetime:  2019-05-03  23:59
+
+-- Timestamp: 2019-05-03  23:59 buranin devami da gelir
+
+-- Year:      2019
+
+
+
+
+
+--- Numeric Data Types:
+
+------------- Integer Types:
+
+-- Integer or Int
+-- smallint
+-- tinyint
+-- mediumint
+-- bigint
+
+-- SQL bunlarin tamamina integer der. 
+-- ama bunlarin hepsini destekler , problemsiz calistirir
+
+
+
+
+------------- Fixed- Point Types
+
+-- Decimal
+-- Numeric
+
+
+
+
+--------------- Floating Point Types:
+
+-- Float
+-- Double
+
+-- SQL bunlara Real der ve ikisini de destekler
+
+
+
+
+
+
+
+
+
+
+
+
+
 
