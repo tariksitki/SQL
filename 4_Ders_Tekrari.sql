@@ -673,11 +673,17 @@ CREATE TABLE "chinook"."calisanlar"
 -- sütunlari bulunmali
 
 
-CREATE TABLE personel
+CREATE TABLE calisanlar
     (first_name text,
     last_name text,
     age INT,
     hire_date Date);
+
+
+
+-- simdi sqlite da database structure diyerek tabloyu inceleyelim
+
+-- 
 
 
 
