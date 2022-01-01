@@ -627,6 +627,62 @@ WHERE tracks.AlbumId = albums.AlbumId AND
 
 
 
+-----------------------  Create Table
+
+
+-- syntax su sekildedir:
+
+CREATE TABLE table_name
+    (column_name1 data_type
+    column_name2 data_type);
+
+
+
+--- örnek:
+
+
+CREATE TABLE employee 
+    (first_name varchar(15),
+    last_name varchar(20),
+    age INT,
+    hire_date DATE);
+
+-- Dikkat: tablo isminden sonra parantez
+-- burada varchar yerine text de yazabilirdik
+
+
+SELECT *
+from employee;
+
+
+-- sqlite varchar i  da kabul eder
+
+-- Not: normalde tablo olusturma komutunda veri tabani da yazariz
+-- burada sartimiz sudur:
+-- yazmis oldugumuz veri tabani attach yapilmis olmalidir
+CREATE TABLE "chinook"."calisanlar"
+    (erkekler text
+    kadinlar text);
+
+-- ancak veri tabani yazmaz isek bu durumda acik olan
+-- veri tabaninda tablo olusturur
+
+
+-- Soru: personel adinda bir tablo olusturalim. 
+-- tabloda first_name, last_name, age INT ve hire_date Date
+-- sütunlari bulunmali
+
+
+CREATE TABLE personel
+    (first_name text,
+    last_name text,
+    age INT,
+    hire_date Date);
+
+
+
+
+
 
 
 
